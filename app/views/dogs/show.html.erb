@@ -1,0 +1,23 @@
+<h1><%= @dog.name %></h1>
+
+<h3>Breed: <%= @dog.breed %></h3>
+
+<h3>Age: <%= @dog.age %></h3>
+
+<h3>Owners:</h3>
+<ul>
+  <% @dog.employees.each do |employee| %>
+  <li><%= link_to employee.to_s, employee_path(employee) %></li>
+  <% end %>
+
+</ul>
+
+<div>
+  <%= button_to "Edit", edit_dog_path, method: :get %>
+  <%= button_to "Delete", dog_path, method: :delete, data: {confirm: "Are you sure you want to delete?"} %>
+</div>
+
+<div>
+  <%= button_to "Back To Employees", employees_path, method: :get %>
+  <%= button_to "Back To Dogs", dogs_path, method: :get%>
+</div>
