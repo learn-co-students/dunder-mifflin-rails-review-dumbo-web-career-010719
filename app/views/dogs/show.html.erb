@@ -1,0 +1,13 @@
+<h1><%= @dog.name %></h1>
+
+<h4><%= @dog.breed %></h4>
+<h4><%= @dog.age %></h4>
+
+<% @employees.each do |emp|%>
+  <% if emp.dog == @dog %>
+    <label><%= "#{emp.first_name} #{emp.last_name}" %></label><br>
+  <% end %>
+<% end %>
+
+
+<%# name, breed, age and the list of Dunder Mifflin Employees they are connected to%>
