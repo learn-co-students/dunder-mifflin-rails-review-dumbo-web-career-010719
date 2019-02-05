@@ -1,0 +1,16 @@
+<%= form_for @employee do |f| %>
+  <%= label_tag :first_name %>
+  <%= f.text_field :first_name %><br>
+  <%= label_tag :last_name %>
+  <%= f.text_field :last_name %><br>
+  <%= label_tag :alias %>
+  <%= f.text_field :alias %><br>
+  <%= label_tag :title %>
+  <%= f.text_field :title %><br>
+  <%= label_tag :office %>
+  <%= f.text_field :office %><br>
+  <%= label_tag :img_url %>
+  <%= f.url_field :img_url %><br>
+  <%= f.collection_select :dog_id, Dog.all, :id, :name %><br>
+  <%= f.submit %>
+<% end %>
