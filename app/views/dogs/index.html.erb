@@ -1,0 +1,9 @@
+<ol>
+<% @dogs.each do |dog|%>
+    <li><%= link_to dog.name, dog_path(dog)%> - owned by Employee: <%= dog.employees.count %>  </li>
+<%end%>
+</ol>
+
+<%= link_to "Sort By Dogs owned", sort_dog_path %>
+
+

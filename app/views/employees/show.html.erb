@@ -1,0 +1,18 @@
+
+<h1><%= @employee.to_s %></h1>
+<p><%= @employee.alias %></p>
+<p><%= @employee.title %></p>
+<p><%= @employee.office %></p>
+<p><%= @employee.dog.name %></p>
+<img src=<%= @employee.img_url%> alt="Employee img" height="500" width="500">
+
+<%# form_tag employee_path(@employee), method: :delete do %>
+    <%# submit_tag "Delete this employee"%>
+<% #end %>
+
+<%# form_tag edit_employee_path(@employee), method: :get do %>
+    <%# submit_tag "Edit this employee"%>
+<%# end %>
+
+<%= button_to "Edit", edit_employee_path, method: :get%>
+<%= button_to "Delete", employee_path(@employee), method: :delete , data: {confirm: "Are you sure?"}%>
