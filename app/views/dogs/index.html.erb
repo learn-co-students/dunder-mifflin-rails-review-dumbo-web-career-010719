@@ -4,3 +4,7 @@
     <li><%= link_to dog.name, dog_path(dog) %> (<%= dog.employees.count %> owners)</li>
   <% end %>
 </ul>
+
+<div>
+  <%= button_to "Back To Employees", employees_path, method: :get %>
+</div>
