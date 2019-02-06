@@ -1,5 +1,5 @@
+<h1>Employee List:</h1>
 <div class="body">
-  <h1>Dunder Mifflin Employee List:</h1>
   <ul>
     <% @employees.each do |employee| %>
     <li><%= link_to employee.to_s, employee_path(employee) %></li>
