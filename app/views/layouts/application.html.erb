@@ -8,6 +8,31 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <h1>Dunder Mifflin, Inc</h1>
+  <h2>Paper Company</h2>
+  <nav class = "navbar">
+    <ul>
+      <li> <%= link_to "Home", '/' %></li>
+      <li class = "dropdown">
+        <%= link_to "Employees", employees_path, class: "dropbtn"%>
+      <div class="dropdown-content">
+      <% Employee.all.each do |employee| %>
+      <%= link_to employee.to_s, employee_path(employee) %>
+      <% end %>
+      </div></li>
+
+      <li class = "dropdown">
+        <%= link_to "Dogs", dogs_path, class: "dropbtn"%>
+        <div class="dropdown-content">
+        <% Dog.all.each do |dog| %>
+        <%= link_to dog.name, dog_path(dog) %>
+        <% end %>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+
   <body>
     <%= yield %>
   </body>

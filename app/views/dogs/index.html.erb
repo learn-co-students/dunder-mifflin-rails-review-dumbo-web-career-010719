@@ -1,10 +1,9 @@
-<h1>List of Dogs:</h1>
-<ul>
-  <% @dogs.each do |dog| %>
-    <li><%= link_to dog.name, dog_path(dog) %> (<%= dog.employees.count %> owners)</li>
-  <% end %>
-</ul>
+<div class="body">
 
-<div>
-  <%= button_to "Back To Employees", employees_path, method: :get %>
+  <h1>List of Dogs:</h1>
+  <ul>
+    <% @dogs.each do |dog| %>
+    <li><%= link_to dog.name, dog_path(dog) %> (<%= dog.employees.count %> owners)</li>
+    <% end %>
+  </ul>
 </div>

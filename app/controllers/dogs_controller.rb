@@ -3,7 +3,6 @@ class DogsController < ApplicationController
   def index
     @dogs = Dog.all
     @dogs = @dogs.sort_by {|dog| dog.employees.count}
-    render :index
   end
 
   def show

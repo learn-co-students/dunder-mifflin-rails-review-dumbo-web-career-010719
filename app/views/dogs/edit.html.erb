@@ -1,20 +1,21 @@
+<div class="body">
+  <h1>Edit Dog:</h1>
+  <%= form_for @dog do |f| %>
 
-<h1>Edit Dog:</h1>
-<%= form_for @dog do |f| %>
-  <div >
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+    <p><%= f.label :name %>
+    <%= f.text_field :name %></p>
 
-  <div>
-    <%= f.label :breed %>
-    <%= f.text_field :breed %>
-  </div>
-  <div>
-    <%= f.label :age %>
-    <%= f.text_field :age %>
-  </div>
-  <%= f.submit "Submit" %>
-<% end %>
+    <p><%= f.label :breed %>
+    <%= f.text_field :breed %></p>
 
-<%= button_to "Back", dog_path, method: :get %>
+    <p><%= f.label :age %>
+    <%= f.text_field :age %></p>
+
+  <p class = "button_to"><%= f.submit "Submit" %></p>
+  <p><%= button_to "Back", dog_path, method: :get, class: "button"  %></p>
+  <% end %>
+
+
+
+
+</div>

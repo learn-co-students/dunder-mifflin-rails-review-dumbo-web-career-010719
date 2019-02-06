@@ -1,12 +1,12 @@
-<h1>Dunder Mifflin Employee List:</h1>
-<ul>
-  <% @employees.each do |employee| %>
+<div class="body">
+  <h1>Dunder Mifflin Employee List:</h1>
+  <ul>
+    <% @employees.each do |employee| %>
     <li><%= link_to employee.to_s, employee_path(employee) %></li>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
 
-<div>
-  <%= button_to "Create Employee", new_employee_path, method: :get %>
-  <%= button_to "Back To Dogs", dogs_path, method: :get%>
+<%= button_to "Create Employee", new_employee_path, method: :get, class: "button"  %>
+
 
 </div>
