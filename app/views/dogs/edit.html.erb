@@ -1,0 +1,21 @@
+<div class="body">
+  <h1>Edit Dog:</h1>
+  <%= form_for @dog do |f| %>
+
+    <p><%= f.label :name %>
+    <%= f.text_field :name %></p>
+
+    <p><%= f.label :breed %>
+    <%= f.text_field :breed %></p>
+
+    <p><%= f.label :age %>
+    <%= f.text_field :age %></p>
+
+  <p class = "button_to"><%= f.submit "Submit" %></p>
+  <p><%= button_to "Back", dog_path, method: :get, class: "button"  %></p>
+  <% end %>
+
+
+
+
+</div>

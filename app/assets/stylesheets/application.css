@@ -13,3 +13,149 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   background-repeat: no-repeat;
+   background-image: linear-gradient(pink, white);
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  h1, h2, a {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+  }
+
+  form, input, #employee_dog_id {
+    font-size: 18px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+  }
+  input[type=text] {
+    width: 50%;
+  }
+
+  a:hover, a:active {
+    color: white;
+    background-color: #FFC300;
+    text-decoration: none;
+  }
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+  .form {
+    text-align: center !important;
+  }
+
+  .button_to{
+    display: inline-block;
+  }
+
+  .button:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    opacity: 100;
+    background-color: #111;
+  }
+
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #FF68B1;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 2px 2px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .navbar {
+    padding: 5px 0px 0px 0px;
+    background-color: #FF68B1;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   }
+
+  .navbar ul li {
+    float: left;
+  }
+
+  .navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transform: all 5s;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .navbar li a:hover {
+    opacity: 100;
+    background-color: #111;
+}
+
+ .dropbtn li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #FFC300;
+}
+
+.dropdown li {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: pink;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.body {
+  line-height: 150%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 25px;
+  padding-bottom: 100px;
+}

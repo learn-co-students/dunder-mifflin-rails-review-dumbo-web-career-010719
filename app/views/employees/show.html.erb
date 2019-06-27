@@ -1,0 +1,25 @@
+<div class="body">
+  <h1><%= @employee.to_s %></h1>
+
+
+
+  <div class="info">
+    <%= image_tag @employee.img_url %>
+    <div class="head">
+      <%= button_to "Edit", edit_employee_path, method: :get, class: "button" %>
+      <%= button_to "Delete", employee_path, method: :delete, data: {confirm: "Are you sure you want to delete?"}, class: "button" %>
+    </div>
+    <% if @employee.alias != "none" %>
+    <h3>Alias: "<%= @employee.alias %>"</h3>
+    <% end %>
+
+    <h3>Title: <%= @employee.title %></h3>
+
+    <h3>Office: <%= @employee.office %></h3>
+
+    <h3>Dog: <%= link_to @employee.dog.name, dog_path(@employee.dog) %></h3>
+
+  </div>
+
+
+</div>

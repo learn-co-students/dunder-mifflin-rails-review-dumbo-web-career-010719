@@ -1,0 +1,52 @@
+<div class="body">
+  <h1>Edit Employee:</h1>
+
+  <div>
+    <% if flash[:error] %>
+    <% flash[:error].each do |error| %>
+    <p style="color: red;"><%= error %></p>
+    <% end %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form_for @employee do |f| %>
+    <div>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </div>
+
+    <div>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+
+    <div>
+      <%= f.label :alias %>
+      <%= f.text_field :alias %>
+    </div>
+
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label :dog_id, "Dog" %>
+      <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+    </div>
+    <div>
+      <%= f.label :office %>
+      <%= f.text_field :office %>
+    </div>
+
+    <div>
+      <%= f.label :img_url %>
+      <%= f.text_field :img_url %>
+    </div>
+    <%= f.submit %>
+    <% end %>
+  </div>
+
+  <%= button_to "Back", employee_path, method: :get, class: "button"  %>
+
+</div>
